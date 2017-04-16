@@ -25,7 +25,7 @@ $(function() {
     console.log('onstart', arguments);
     isRecognizing = true;
 
-  //  $btnMic.attr('class', 'on');
+    $btnMic.attr('class', 'on');
   };
 
   recognition.onend = function() {
