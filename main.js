@@ -11,7 +11,8 @@ $(function() {
   }
 
   var recognition = new webkitSpeechRecognition();
-  var isRecognizing = false;
+  // var isRecognizing = false;
+	var isRecognizing = true;
   var ignoreOnend = false;
   var finalTranscript = '';
   var audio = document.getElementById('audio');
@@ -21,11 +22,11 @@ $(function() {
   recognition.continuous = true;
   recognition.interimResults = true;
 
-  recognition.onstart = function() {
-    console.log('onstart', arguments);
-    isRecognizing = true;
+ // recognition.onstart = function() {
+ //   console.log('onstart', arguments);
+ //   isRecognizing = true;
 
-    $btnMic.attr('class', 'on');
+ //  $btnMic.attr('class', 'on');
   };
 
   recognition.onend = function() {
