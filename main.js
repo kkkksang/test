@@ -17,6 +17,7 @@ $(function() {
   var finalTranscript = '';
   var audio = document.getElementById('audio');
   // var $btnMic = $('#btn-mic');
+	var $btnMic = on
   var $result = $('#result');
   var $iconMusic = $('#icon-music');
   recognition.continuous = true;
