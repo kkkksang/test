@@ -22,7 +22,8 @@ $(function() {
   var $iconMusic = $('#icon-music');
   recognition.continuous = true;
   recognition.interimResults = true;
-
+  recognition.start();  
+  
  // recognition.onstart = function() {
  //   console.log('onstart', arguments);
  //   isRecognizing = true;
