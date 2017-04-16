@@ -129,7 +129,7 @@ $(function() {
   		audio.volume += 0.2;
   	} else if (string.endsWith('볼륨 다운') || string.endsWith('볼륨다운')) {
   		audio.volume -= 0.2;
-  	} else if (string.endsWith('스피치') || string.endsWith('말해줘') || string.endsWith('말 해 줘')) {
+  	} else if (string.endsWith('스피치') || string.endsWith('말해줘') || string.endsWith('말해 줘')) {
   	  textToSpeech($('#final_span').text() || '전 음성 인식된 글자를 읽습니다.');
   	}
   }
