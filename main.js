@@ -11,24 +11,21 @@ $(function() {
   }
 
   var recognition = new webkitSpeechRecognition();
-  // var isRecognizing = false;
-	var isRecognizing = true;
+  var isRecognizing = false;
   var ignoreOnend = false;
   var finalTranscript = '';
   var audio = document.getElementById('audio');
-  // var $btnMic = $('#btn-mic');
-	var $btnMic = on
+  var $btnMic = $('#btn-mic');
   var $result = $('#result');
   var $iconMusic = $('#icon-music');
   recognition.continuous = true;
   recognition.interimResults = true;
-  recognition.start();  
-  
- // recognition.onstart = function() {
- //   console.log('onstart', arguments);
- //   isRecognizing = true;
+ 
+  recognition.onstart = function() {
+    console.log('onstart', arguments);
+    isRecognizing = true;
 
- //  $btnMic.attr('class', 'on');
+   $btnMic.attr('class', 'on');
   };
 
   recognition.onend = function() {
@@ -39,12 +36,12 @@ $(function() {
       return false;
     }
 
-    // DO end process
-    //$btnMic.attr('class', 'off');
-    //if (!finalTranscript) {
-    //  console.log('empty finalTranscript');
-    //  return false;
-    //}
+  // DO end process
+   $btnMic.attr('class', 'off');
+   if (!finalTranscript) {
+     console.log('empty finalTranscript');
+     return false;
+   }
 
     if (window.getSelection) {
       window.getSelection().removeAllRanges();
