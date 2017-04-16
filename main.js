@@ -14,10 +14,10 @@ $(function() {
   var isRecognizing = false;
   var ignoreOnend = false;
   var finalTranscript = '';
- 	var audio = document.getElementById('audio');
+  var audio = document.getElementById('audio');
   var $btnMic = $('#btn-mic');
- 	var $result = $('#result');
- 	var $iconMusic = $('#icon-music');
+  var $result = $('#result');
+  var $iconMusic = $('#icon-music');
   recognition.continuous = true;
   recognition.interimResults = true;
 
@@ -25,7 +25,7 @@ $(function() {
     console.log('onstart', arguments);
     isRecognizing = true;
 
-    $btnMic.attr('class', 'on');
+  //  $btnMic.attr('class', 'on');
   };
 
   recognition.onend = function() {
@@ -37,11 +37,11 @@ $(function() {
     }
 
     // DO end process
-    $btnMic.attr('class', 'off');
-    if (!finalTranscript) {
-      console.log('empty finalTranscript');
-      return false;
-    }
+    //$btnMic.attr('class', 'off');
+    //if (!finalTranscript) {
+    //  console.log('empty finalTranscript');
+    //  return false;
+    //}
 
     if (window.getSelection) {
       window.getSelection().removeAllRanges();
