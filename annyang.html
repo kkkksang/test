@@ -21,14 +21,12 @@ interim_transcript += event.results[i][0].transcript;
 console.log("interim_transcript="+interim_transcript);
 }
 }
-document.getElementById('result').innerHTML = '중간값:='+interim_transcript+'<br/>결과값='+final_transcript;
+document.getElementById('result').innerHTML = final_transcript;
 console.log('interim='+interim_transcript+'|final='+final_transcript);
 };
 </script>
 </head>
 <body class="" id="grid">
-<br/><br/>
-한국어 음성 처리 테스트<br/><br/>
 <div id='result'>
 </div>
 </body>
